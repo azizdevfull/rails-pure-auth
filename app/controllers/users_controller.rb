@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "You have successfully registered."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
