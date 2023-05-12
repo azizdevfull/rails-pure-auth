@@ -1,0 +1,11 @@
+<!-- login.html.erb -->
+<h1>Login</h1>
+<%= form_for @user, url: authenticate_users_path do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email, required: true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, required: true %>
+
+  <%= f.submit "Login" %>
+<% end %>
